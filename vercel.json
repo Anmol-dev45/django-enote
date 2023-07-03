@@ -5,11 +5,11 @@
       "use": "@natanffs/vercel-python-wsgi",
       "config": {
         "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      },
-      "output": {
-        "root": "api/static/api",
-        "clean": true
+        "runtime": "python3.9" ,
+        "output": {
+          "root": "api/static/api",
+          "clean":true
+        }  
       }
     }
   ],
