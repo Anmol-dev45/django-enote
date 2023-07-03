@@ -6,7 +6,9 @@
       "config": {
         "maxLambdaSize": "15mb",
         "runtime": "python3.9" ,
-        "output": "static/"   
+        "output": {
+          "root": "static/"
+        }  
       }
     }
   ],
