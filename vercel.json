@@ -1,19 +1,13 @@
 {
-    "builds": [
+  "builds": [{
+      "src": "enote/wsgi.py",
+      "use": "@ardnt/vercel-python-wsgi",
+      "config": { "maxLambdaSize": "15mb" }
+  }],
+  "routes": [
       {
-        "src": "enote/wsgi.py",
-        "use": "@ardnt/vercel-python-wsgi@1.1.0",
-        "config": {
-          "runtime": "python3.9",
-          "maxLambdaSize": "15mb"
-        }
+          "src": "/(.*)",
+          "dest": "enote/wsgi.py"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "enote/wsgi.py"
-      }
-    ]
-  }
-  
+  ]
+}
